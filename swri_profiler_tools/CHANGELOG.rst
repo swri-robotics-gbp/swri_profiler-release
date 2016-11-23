@@ -2,6 +2,9 @@
 Changelog for package swri_profiler_tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.3 (2016-11-23)
+------------------
+
 0.0.2 (2016-11-23)
 ------------------
 * Fixing some minor alignment issues in partition widget.
