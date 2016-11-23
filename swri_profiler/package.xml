@@ -1,6 +1,6 @@
 <package format="2">
   <name>swri_profiler</name>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <description>
     swri_profiler provides basic tools for real-time selective
     profiling of ROS C++ nodes.
@@ -11,6 +11,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <depend>diagnostic_updater</depend>
   <depend>roscpp</depend>
   <depend>std_msgs</depend>
   <depend>swri_profiler_msgs</depend>
