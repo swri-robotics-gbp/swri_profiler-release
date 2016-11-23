@@ -1,0 +1,12 @@
+Source: ros-indigo-swri-profiler-tools
+Section: misc
+Priority: extra
+Maintainer: Elliot Johnson <elliot.johnson@swri.org>
+Build-Depends: debhelper (>= 9.0.0), libqt4-dev, ros-indigo-catkin, ros-indigo-roscpp, ros-indigo-std-msgs, ros-indigo-swri-profiler-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-swri-profiler-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-dbus, libqt4-dev, libqt4-network, libqt4-script, libqt4-test, libqt4-xml, libqtcore4, ros-indigo-roscpp, ros-indigo-std-msgs, ros-indigo-swri-profiler-msgs
+Description: Provides tools for viewing data produced by nodes that use the swri_profiler library to output profiling information.
