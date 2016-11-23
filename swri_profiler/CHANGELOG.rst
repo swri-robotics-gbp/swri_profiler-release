@@ -2,6 +2,11 @@
 Changelog for package swri_profiler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.3 (2016-11-23)
+------------------
+* Add Travis CI support
+* Contributors: P. J. Reed
+
 0.0.2 (2016-11-23)
 ------------------
 * Add missing runtime dependency on rosbridge_server
