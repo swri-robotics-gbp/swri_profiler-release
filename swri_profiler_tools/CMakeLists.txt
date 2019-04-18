@@ -14,37 +14,21 @@ set(RUNTIME_DEPS
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
 ### QT ###
-if("$ENV{ROS_DISTRO}" STRLESS "kinetic")
-  find_package(Qt4 COMPONENTS REQUIRED QtCore QtGui)
-  set(Qt_FOUND TRUE)
-  set(Qt_INCLUDE_DIRS "${QT_INCLUDE_DIR};${QT_QTCORE_INCLUDE_DIR};${QT_QTGUI_INCLUDE_DIR}")
-  set(Qt_LIBRARIES "${QT_QTCORE_LIBRARY};${QT_QTGUI_LIBRARY}")
-  set(Qt_LIBS
-      Qt4::QtCore
-      Qt4::QtGui
-      )
-else()
-  find_package(Qt5Core REQUIRED)
-  find_package(Qt5Gui REQUIRED)
-  find_package(Qt5Widgets REQUIRED)
-  set(CMAKE_INCLUDE_CURRENT_DIR ON)
-  # Not necessary for this project, but these Qt_* variables must be set in order
-  # for catkin_package to DEPENDS on Qt
-  set(Qt_FOUND TRUE)
-  set(Qt_INCLUDE_DIRS "${Qt5Core_INCLUDE_DIRS};${Qt5Gui_INCLUDE_DIRS};${Qt5Widgets_INCLUDE_DIRS}")
-  set(Qt_LIBRARIES "${Qt5Core_LIBRARIES};${Qt5Gui_LIBRARIES};${Qt5Widgets_LIBRARIES}")
-endif()
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5Widgets REQUIRED)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+# Not necessary for this project, but these Qt_* variables must be set in order
+# for catkin_package to DEPENDS on Qt
+set(Qt_FOUND TRUE)
+set(Qt_INCLUDE_DIRS "${Qt5Core_INCLUDE_DIRS};${Qt5Gui_INCLUDE_DIRS};${Qt5Widgets_INCLUDE_DIRS}")
+set(Qt_LIBRARIES "${Qt5Core_LIBRARIES};${Qt5Gui_LIBRARIES};${Qt5Widgets_LIBRARIES}")
 
 ### Catkin ###
 find_package(catkin REQUIRED COMPONENTS ${BUILD_DEPS})
 
 include_directories(include
-  ${catkin_INCLUDE_DIRS}
-  ${Qt_INCLUDE_DIRS})
-
-include_directories(${CMAKE_CURRENT_BINARY_DIR})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(src)
+  ${catkin_INCLUDE_DIRS})
 
 catkin_package(
   CATKIN_DEPENDS ${RUNTIME_DEPS}
@@ -84,15 +68,9 @@ set(SRC_FILES
   src/time_plot_widget.cpp
   )
 
-if("$ENV{ROS_DISTRO}" STRLESS "kinetic")
-  qt4_add_resources(RCC_SRCS resources/images.qrc)
-  qt4_wrap_ui(SRC_FILES ${UI_FILES})
-  qt4_wrap_cpp(SRC_FILES ${MOC_HEADER_FILES})
-else()
-  qt5_add_resources(RCC_SRCS resources/images.qrc)
-  qt5_wrap_ui(SRC_FILES ${UI_FILES})
-  qt5_wrap_cpp(SRC_FILES ${MOC_HEADER_FILES})
-endif()
+qt5_add_resources(RCC_SRCS resources/images.qrc)
+qt5_wrap_ui(SRC_FILES ${UI_FILES})
+qt5_wrap_cpp(SRC_FILES ${MOC_HEADER_FILES})
 
 add_executable(profiler 
   src/main.cpp
@@ -100,7 +78,9 @@ add_executable(profiler
   ${RCC_SRCS})
 target_link_libraries(profiler
   ${catkin_LIBRARIES}
-  ${Qt_LIBRARIES}
+  Qt5::Core
+  Qt5::Gui
+  Qt5::Widgets
   )
 
 add_dependencies(profiler swri_profiler_msgs_generate_messages_cpp)
