@@ -2,6 +2,12 @@
 Changelog for package swri_profiler_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.0 (2019-04-18)
+------------------
+* Update maintainers
+* Make master build on both Indigo and Kinetic
+* Contributors: P. J. Reed
+
 0.1.0 (2017-12-14)
 ------------------
 
