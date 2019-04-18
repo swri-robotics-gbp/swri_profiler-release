@@ -1,0 +1,12 @@
+Source: ros-kinetic-swri-profiler
+Section: misc
+Priority: extra
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-diagnostic-updater, ros-kinetic-roscpp, ros-kinetic-rospy, ros-kinetic-std-msgs, ros-kinetic-swri-profiler-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-swri-profiler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-diagnostic-updater, ros-kinetic-rosbridge-server, ros-kinetic-roscpp, ros-kinetic-rospy, ros-kinetic-std-msgs, ros-kinetic-swri-profiler-msgs
+Description: swri_profiler provides basic tools for real-time selective profiling of ROS C++ nodes.
