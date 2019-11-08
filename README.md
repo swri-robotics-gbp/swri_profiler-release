@@ -1,3 +1,29 @@
+## swri_profiler (melodic) - 0.2.0-1
+
+The packages in the `swri_profiler` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -r melodic swri_profiler` on `Fri, 08 Nov 2019 23:12:38 -0000`
+
+These packages were released:
+- `swri_profiler`
+- `swri_profiler_msgs`
+- `swri_profiler_tools`
+
+Version of package(s) in repository `swri_profiler`:
+
+- upstream repository: https://github.com/swri-robotics/swri_profiler.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.2.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.14`
+- rosdep version: `0.17.1`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.42`
+
+
 ## swri_profiler (kinetic) - 0.2.0-0
 
 The packages in the `swri_profiler` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic swri_profiler` on `Thu, 18 Apr 2019 19:29:54 -0000`
