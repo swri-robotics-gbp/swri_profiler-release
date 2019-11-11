@@ -1,0 +1,12 @@
+Source: ros-melodic-swri-profiler
+Section: misc
+Priority: optional
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-diagnostic-updater, ros-melodic-roscpp, ros-melodic-rospy, ros-melodic-std-msgs, ros-melodic-swri-profiler-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-swri-profiler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-diagnostic-updater, ros-melodic-rosbridge-server, ros-melodic-roscpp, ros-melodic-rospy, ros-melodic-std-msgs, ros-melodic-swri-profiler-msgs
+Description: swri_profiler provides basic tools for real-time selective profiling of ROS C++ nodes.
