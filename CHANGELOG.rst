@@ -2,6 +2,13 @@
 Changelog for package swri_profiler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.1 (2019-11-11)
+------------------
+* Add repository url to package.xml
+* Correct license tag in package.xml.
+* Clean up CMakeLists
+* Contributors: Isaac I.Y. Saito, Matthew Bries, P. J. Reed
+
 0.2.0 (2019-04-18)
 ------------------
 * Update maintainers
