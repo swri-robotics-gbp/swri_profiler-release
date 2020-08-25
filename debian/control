@@ -1,0 +1,12 @@
+Source: ros-noetic-swri-profiler
+Section: misc
+Priority: optional
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-diagnostic-updater, ros-noetic-roscpp, ros-noetic-rospy, ros-noetic-std-msgs, ros-noetic-swri-profiler-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-swri-profiler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-diagnostic-updater, ros-noetic-rosbridge-server, ros-noetic-roscpp, ros-noetic-rospy, ros-noetic-std-msgs, ros-noetic-swri-profiler-msgs
+Description: swri_profiler provides basic tools for real-time selective profiling of ROS C++ nodes.
