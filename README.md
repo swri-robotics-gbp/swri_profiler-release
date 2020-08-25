@@ -1,3 +1,29 @@
+## swri_profiler (noetic) - 0.2.2-1
+
+The packages in the `swri_profiler` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic swri_profiler` on `Tue, 25 Aug 2020 18:32:31 -0000`
+
+These packages were released:
+- `swri_profiler`
+- `swri_profiler_msgs`
+- `swri_profiler_tools`
+
+Version of package(s) in repository `swri_profiler`:
+
+- upstream repository: https://github.com/swri-robotics/swri_profiler.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.2.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## swri_profiler (kinetic) - 0.2.2-2
 
 The packages in the `swri_profiler` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic swri_profiler` on `Mon, 11 Nov 2019 23:10:10 -0000`
